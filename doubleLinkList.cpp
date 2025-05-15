@@ -24,8 +24,9 @@ class DoubleLinkedList{
             Node *newNode = new Node();
             newNode -> noMhs = nim;
             if (START == NULL || nim <= START -> noMhs){
-                if (START != NULL){
-                    
+                if (START != NULL && nim == START -> noMhs){
+                    cout << '\nDuplicate number not allowed';
+                    return;
                 }
             }
         }
