@@ -44,6 +44,8 @@ class DoubleLinkedList{
                 cout << "\noDuplicate roll number no allowed" << endl;
                 return;
             }
+            newNode -> next = current -> next;
+            newNode -> prev = current;
         }
 };
 
