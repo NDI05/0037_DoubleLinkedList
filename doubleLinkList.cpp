@@ -128,6 +128,72 @@ class DoubleLinkedList{
             }
         }
 
+        void searchData(){
+            if (START == NULL){
+                cout << "\nList is empty" << endl;
+                return;
+            }
+
+            int rollNo;
+            cout << "\nEnter the roll number to search: ";
+            cin >> rollNo;
+
+            Node *current = START;
+
+            while (current != NULL && current -> noMhs != rollNo){
+                current = current -> next;
+            }
+            if (current == NULL){
+                cout << "Record Not Found\n";
+            }else{
+                cout << "Record Found\n";
+                cout << "Roll Member: " << current -> noMhs << endl;
+            }
+        }
+};
+
+int main(){
+    DoubleLinkedList list;
+    char choice;
+    do
+    {
+        cout << "\nMenu: \n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. View Ascending\n";
+        cout << "4. View Descending\n";
+        cout << "5. Search Record\n";
+        cout << "6. exit\n"; 
+        cout << "Enter The Number: ";
+        cin >> choice;
         
+        switch (choice)
+        {
+        case '1':
+            list.addNode();
+            break;
+        case '2':
+            list.hapus();
+            break;
+        case '3':
+            list.traverse();
+            break;
+        case '4':
+            list.revTraverse();
+            break;
+        case '5':
+            list.searchData();
+            break;
+        case '6':
+            return 0;
+        default:
+            cout << "Invalid Option\n";
+        }
+        cout << "\n Press enter tp countinue...";
+        cin.ignore();
+        cin.get();
+        cout << endl;
+        system("clear");
+    } while ();
 };
 
