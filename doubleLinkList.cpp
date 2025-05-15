@@ -48,8 +48,27 @@ class DoubleLinkedList{
             newNode -> prev = current;
 
             if(current -> next != NULL){
-                
+                current -> next -> prev = newNode;
             }
+            current -> next = newNode;
+        }
+
+        void hapus(){
+            if (START == NULL){
+                cout << '\n List is empty'<< endl;
+                return;
+            }
+            cout << "\nEnter Number You Want To Delete: ";
+            int rollNo;
+            cin >> rollNo;
+
+            Node *current = START;
+
+            while (current != NULL && current -> noMhs != rollNo)
+            {
+                current = current -> next;
+            }
+            
         }
 };
 
