@@ -85,6 +85,23 @@ class DoubleLinkedList{
                     current -> next -> prev = current -> prev;
                 }
             }
+            delete current;
+            cout << "Record With roll number " << rollNo << "deleted" << endl;
+        }
+
+        void traverse(){
+            if (START == NULL){
+                cout << "\n Lisy is Empty" << endl;
+                return;
+            }
+
+            Node *currentNode = START;
+
+            cout << "\nRecord in ascending order of roll number are: \n";
+            int i =0;
+            while (currentNode != NULL){
+                
+            }
         }
 };
 
