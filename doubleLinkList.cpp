@@ -10,6 +10,11 @@ class Node{
 };
 
 class DoubleLinkedList{
-
+    private:
+        Node *start;
+    public:
+        DoubleLinkedList(){
+            
+        }
 };
 
