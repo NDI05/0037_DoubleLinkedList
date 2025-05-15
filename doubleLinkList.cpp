@@ -46,6 +46,10 @@ class DoubleLinkedList{
             }
             newNode -> next = current -> next;
             newNode -> prev = current;
+
+            if(current -> next != NULL){
+                
+            }
         }
 };
 
