@@ -194,6 +194,6 @@ int main(){
         cin.get();
         cout << endl;
         system("clear");
-    } while ();
+    } while (choice != '6');
 };
 
